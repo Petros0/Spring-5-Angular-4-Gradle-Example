@@ -22,6 +22,11 @@ task bootFullApplication(type: GradleBuild) {
     setTasks([':client:npmUpdate', ':client:clean', ':client:buildClientToSpring', ':backend:bootRun'])
 }
 
+task bootJarFull(type: GradleBuild) {
+    group 'application'
+    setTasks([':client:npmUpdate', ':client:clean', ':client:buildClientToSpring', ':backend:bootJar'])
+}
+
 //------------------------------------------------------------------------------------------------------------------------
 //    Tasks - Init project
 //------------------------------------------------------------------------------------------------------------------------
